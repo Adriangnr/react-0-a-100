@@ -1,3 +1,14 @@
+var Header = React.createClass({
+    render: function(){
+        return(
+            <header>
+                <h1>Mis comidas favoritas</h1>
+                <i>Total: {this.props.cantidad}</i>
+            </header>
+        )
+    }
+})
+
 var Comida = React.createClass({
     getInitialState: function(){
         return { like: Boolean(this.props.like),
@@ -117,11 +128,7 @@ var ListaComida = React.createClass({
     },
     render: function() {
         return(<div className="centerBlock">
-                <header>
-                    <h1>Mis comidas favoritas</h1>
-                    <i>Total: {this.state.comidas.length}</i>
-
-                </header>
+                <Header cantidad={this.state.comidas.length}/>
                 <div className="input-group">
                     <input ref="nuevaComida" onKeyPress={this.handleKeyDown} type="text" className="form-control" placeholder="Agregar nueva comida..." />
                     <span className="input-group-btn">
