@@ -90,7 +90,13 @@
     <Compo propiedad /> propiedad = true
 *
 * ----------------------------------------------------------------------------------------------------------------------
-* - Generacion dinamica de componentes -
-* --------------------------------------
+* - Ciclon de vida de componentes -
+* ---------------------------------
 *
+*   componentWillMount:{} Estado previo a que el componente se cargue.
+*   componentDidMount: {} Estado posterior a la carga del componente.
+*   getDefaultProps: function(){
+*       return {
+*       }
+*   } Declara propiedades por defecto.
 * */
